@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+
+{% block content %}
+<body>
+<h5>Удаление данных о зарплате</h5>
+<form action="delete_salary_post" method="POST" style="width: 50%;" align="center">
+    <div class="input-group">
+      <div class="input-group-prepend">
+      </div>
+      <input name="username" type="text" class="form-control" placeholder="Имя пользователя" aria-label="Имя пользователя" aria-describedby="basic-addon1">
+    </div>
+  <p></p>
+    <button class="btn btn-outline-success" type="submit" align="center">Удалить данные</button>
+</form>
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "index.html" %}
+
+{% block content %}
+<body>
+    {% for salary in salary_list %}
+        <p>Имя пользователя: {{salary.employe_username}}; текущая зарплата: {{salary.salary}};
+        дата повышения зарплаты: {{salary.salary_increase_date}}</p>
+    {% endfor %}
+</body>
+</html>
+{% endblock %}

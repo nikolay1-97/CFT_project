@@ -1,0 +1,28 @@
+{% extends "index.html" %}
+
+
+{% block content %}
+<body>
+<h3>Вход в систему</h3>
+{% if wrong_password %}
+    <p>Неверный логин или пароль</p>
+{% elif not valid_token %}
+    <p>Время вашего сеанса истекло. Войдиет в систему заново</p>
+{% endif %}
+<form action="token" method="POST" style="width: 50%;" align="center">
+    <div class="input-group">
+      <div class="input-group-prepend">
+      </div>
+       <input name="username" type="text" class="form-control" placeholder="Имя пользователя" aria-label="Имя пользователя" aria-describedby="basic-addon1">
+    </div>
+    <p></p>
+    <div>
+       <input name="password" type="text" class="form-control" placeholder="Пароль" aria-label="Пароль" aria-describedby="basic-addon1">
+    </div>
+    <p></p>
+    <button class="btn btn-outline-success" type="submit" align="center">Войти</button>
+</form>
+</div>
+</body>
+{% endblock %}
+</html>

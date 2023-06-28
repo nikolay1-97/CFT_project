@@ -1,0 +1,30 @@
+{% extends "index.html" %}
+
+{% block content %}
+<body>
+<body>
+	<form action="get_info_about_salary" method="POST" style="width: 50%;" align="center">
+    <p></p>
+    <button class="btn btn-outline-success" type="submit" align="center">Узнать информацию о зарплате</button>
+</form>
+    <p></p>
+    {% if is_admin %}
+    <a href="/get_users">Просмотреть список пользователей</a>
+    <p></p>
+    <a href="/get_salary_list">Просмотреть список записей о зарплате</a>
+    <p></p>
+    <a href="/user_registration">Добавить нового пользователя</a>
+    <p></p>
+    <a href="/update_user">Обновить данные пользователя</a>
+    <p></p>
+    <a href="/delete_user">Удалить пользователя</a>
+    <p></p>
+    <a href="/add_info_about_salary">Добавить информацию о зарплате</a>
+    <p></p>
+    <a href="/update_info_about_salary">Обновить информацию о зарплате</a>
+    <p></p>
+    <a href="/delete_salary">Удалить информацию о зарплате</a>
+    {% endif %}
+</body>
+</html>
+{% endblock %}

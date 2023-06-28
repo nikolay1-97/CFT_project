@@ -1,0 +1,11 @@
+{% extends "index.html" %}
+
+{% block content %}
+<body>
+    {% for user in users %}
+        <p>Имя пользователя: {{user.username}}; имя: {{user.full_name}},
+            возраст: {{user.age}}; должность: {{user.position}}</p>
+    {% endfor %}
+</body>
+</html>
+{% endblock %}

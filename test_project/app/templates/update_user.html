@@ -1,0 +1,33 @@
+{% extends "index.html" %}
+
+{% block content %}
+<body>
+<h5>Обновление данных пользователя</h5>
+<form action="update_user_post" method="POST" style="width: 50%;" align="center">
+    <div class="input-group">
+      <div class="input-group-prepend">
+      </div>
+      <input name="username" type="text" class="form-control" placeholder="Имя пользователя" aria-label="Имя пользователя" aria-describedby="basic-addon1">
+    </div>
+    <p></p>
+    <div>
+       <input name="permission_level" type="text" class="form-control" placeholder="Уровень доступа (введите: 1/2)" aria-label="Уровень доступа (введите: 1/2)" aria-describedby="basic-addon1">
+    </div>
+    <p></p>
+  <div>
+       <input name="full_name" type="text" class="form-control" placeholder="Полное имя" aria-label="Полное имя" aria-describedby="basic-addon1">
+    </div>
+  <p></p>
+  <div>
+       <input name="age" type="text" class="form-control" placeholder="Возраст" aria-label="Возраст" aria-describedby="basic-addon1">
+    </div>
+  <p></p>
+  <div>
+       <input name="position" type="text" class="form-control" placeholder="Должность" aria-label="Должность" aria-describedby="basic-addon1">
+    </div>
+  <p></p>
+    <button class="btn btn-outline-success" type="submit" align="center">Обновить данные</button>
+</form>
+</body>
+</html>
+{% endblock %}
